@@ -11,7 +11,5 @@ $usia = $_POST["usia"];
 
 mysqli_query($connect,"insert into data_user values('','$nama','$alamat','$tempatLahir','$tanggalLahir','$jenisKelamin','$usia')");
 
-$_SESSION["sukses"] = 1;
-
 header("location:form_biodata.php");
 ?>

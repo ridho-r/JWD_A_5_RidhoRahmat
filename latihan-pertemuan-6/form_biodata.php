@@ -51,6 +51,8 @@
         <p class="h2 text-center" style="margin-top: 10vh;">Data Pengguna</p>
         <table class="table table-striped" style="margin-bottom:10vh">
             <?php
+            include "config.php";
+            $result = mysqli_query($connect, "SELECT * FROM data_user");
             while ($user_data = mysqli_fetch_array($result)) {
                 echo "<tr>";
                 echo "<td>" . $user_data['nama'] . "</td>";
