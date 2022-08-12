@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+    <div style="margin-left: 42vw;">
+        <p class="h2" style="margin-top: 10vh;margin-bottom: 5vh">Daftar Menu</p>
+
+        <input type="checkbox" class="btn-check" id="soto" autocomplete="off" value=30000>
+        <label class="btn btn-outline-success mb-2 w-25 center" for="soto"> Soto Banjar Rp30000</label><br>
+
+        <input type="checkbox" class="btn-check" id="nasiSop" autocomplete="off" value=28000>
+        <label class="btn btn-outline-success mb-2 w-25" for="nasiSop">Nasi Sop Rp28000</label><br>
+
+        <input type="checkbox" class="btn-check" id="sate" autocomplete="off" value=20000>
+        <label class="btn btn-outline-success mb-2 w-25" for="sate">Sate Ayam Rp20000</label><br>
+
+        <input type="checkbox" class="btn-check" id="teh" autocomplete="off" value=3000>
+        <label class="btn btn-outline-success mb-2 w-25" for="teh">Teh Hangat/Es Rp3000</label><br>
+
+        <input type="checkbox" class="btn-check" id="jus" autocomplete="off" value=10000>
+        <label class="btn btn-outline-success mb-2 w-25" for="jus">Jus Buah Rp10000</label><br>
+
+        <input type="checkbox" class="btn-check" id="air" autocomplete="off" value=5000>
+        <label class="btn btn-outline-success mb-2 w-25" for="air">Air Mineral Rp5000</label><br>
+
+        <p id="total" class="h5" style="margin-left: 0.6vw;"></p>
+    </div>
+
+<script>
+    var total = document.getElementById("total")
+    var text = "<span>Total Harga : </span>"
+    var jumlah = 0
+    var checkboxes =document.querySelectorAll(".btn-check")
+    
+    for(var checkbox of checkboxes){
+        checkbox.addEventListener("click",function(){
+            if(this.checked == true){
+                jumlah += parseInt(this.value)
+                total.innerHTML = text + jumlah
+            }else{
+                jumlah -= parseInt(this.value)
+                total.innerHTML = text + jumlah
+            }
+        })
+    }
+</script>
+
+</body>
+
+</html>

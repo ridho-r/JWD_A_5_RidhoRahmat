@@ -12,7 +12,7 @@
 
 <body>
 
-    <div class="container-sm">
+    <div class="container">
         <p class="h1 text-center">Form Biodata</p>
         <form method="post" action="input_data.php">
             <div class="mb-3">
@@ -50,6 +50,14 @@
 
         <p class="h2 text-center" style="margin-top: 10vh;">Data Pengguna</p>
         <table class="table table-striped" style="margin-bottom:10vh">
+            <tr>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Tempat Lahir</th>
+                <th>Tanggal Lahir</th>
+                <th>Jenis Kelamin</th>
+                <th>Usia</th>
+            </tr>
             <?php
             include "config.php";
             $result = mysqli_query($connect, "SELECT * FROM data_user");
@@ -60,7 +68,7 @@
                 echo "<td>" . $user_data['tempatLahir'] . "</td>";
                 echo "<td>" . $user_data['tanggalLahir'] . "</td>";
                 echo "<td>" . $user_data['jenisKelamin'] . "</td>";
-                echo "<td>" . $user_data['usia'] . "</td>";
+                echo "<td>" . $user_data['usia'] . "</td></tr>";
             }
             ?>
         </table>

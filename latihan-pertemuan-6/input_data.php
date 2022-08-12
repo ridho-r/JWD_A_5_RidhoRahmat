@@ -1,6 +1,5 @@
 <?php
 include "config.php";
-session_start();
 
 $nama = $_POST["nama"]; 
 $alamat = $_POST["alamat"];
