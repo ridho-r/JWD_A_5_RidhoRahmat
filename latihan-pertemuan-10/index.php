@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <h2>List Mahasiswa</h2>
+    <h2 class="text-center">List Mahasiswa</h2>
 
-    <a href="form-input.php">Tambah data</a><br><br>
+    <a href="form-input.php" class="btn btn-primary btn-sm" style="margin-left:5px">Tambah data</a><br><br>
 
-    <table border="1">
+    <table class="table table-striped">
         <tr>
             <th>NO</th>
             <th>NIM</th>
@@ -35,7 +37,7 @@
             <td>" . $row["nama"] . "</td>
             <td>" . $row["jenis_kelamin"] . "</td>
             <td>" . $row["jurusan"] . "</td>
-            <td><a href='form-edit.php?id_mhs=$row[id_mhs]'>Edit</a> <a href='delete.php?id_mhs=$row[id_mhs]'>Delete</a></td>
+            <td><a class='btn btn-primary btn-sm' href='form-edit.php?id_mhs=$row[id_mhs]'>Edit</a> <a class='btn btn-danger btn-sm' href='delete.php?id_mhs=$row[id_mhs]'>Delete</a></td>
             </tr>";
             $no++;
         }
