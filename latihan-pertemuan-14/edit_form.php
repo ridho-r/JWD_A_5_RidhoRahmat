@@ -39,8 +39,8 @@ function active_radio_button($value, $input)
             <tr>
                 <td>Jenis Kelamin</td>
                 <td>
-                    <input type="radio" name="jenis_kelamin" value="L"><?php echo active_radio_button("L", $row["jenis_kelamin"]); ?> > Laki-Laki
-                    <input type="radio" name="jenis_kelamin" value="P"><?php echo active_radio_button("P", $row["jenis_kelamin"]); ?> > Perempuan
+                    <input type="radio" name="jenis_kelamin" value="L" <?php echo active_radio_button("L", $row["jenis_kelamin"]); ?>> Laki-Laki
+                    <input type="radio" name="jenis_kelamin" value="P" <?php echo active_radio_button("P", $row["jenis_kelamin"]); ?>> Perempuan
                 </td>
             </tr>
             <tr>
